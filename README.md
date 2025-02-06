@@ -19,21 +19,21 @@ If you're hosting your project on Hostinger, the procedure to make Ollama access
 **Step 2: Set Up Your VPS**
 **1.Provision a VPS:**
 
-** In your Hostinger dashboard, navigate to the VPS section and create a new VPS.
-** Select the specifications (CPU, RAM, storage) based on your needs. Ollama doesn't require a lot of resources, but having a VPS with at least 1 GB of RAM is recommended for smoother performance.
+- In your Hostinger dashboard, navigate to the VPS section and create a new VPS.
+- Select the specifications (CPU, RAM, storage) based on your needs. Ollama doesn't require a lot of resources, but having a VPS with at least 1 GB of RAM is recommended for smoother performance.
 
  **2. Access Your VPS:**
 
-** Once your VPS is provisioned, you will get access credentials, including the IP address, username (usually root), and password.
-** Use SSH to access your VPS from your terminal:
+- Once your VPS is provisioned, you will get access credentials, including the IP address, username (usually root), and password.
+- Use SSH to access your VPS from your terminal:
 ssh root@your-vps-ip
 
 **3. Install Necessary Software:**
 
-** Ensure your VPS has the required software to run Ollama (like Docker, PHP, or a web server such as Apache or Nginx).
-** For Ollama, you’ll typically need Docker to run the AI model services.
+- Ensure your VPS has the required software to run Ollama (like Docker, PHP, or a web server such as Apache or Nginx).
+ For Ollama, you’ll typically need Docker to run the AI model services.
 
-** Step 5: Set Up Your PHP Backend (If Required)**
+**Step 3: Set Up Your PHP Backend (If Required)**
 **1.Install PHP:** If your backend needs to communicate with the Ollama API, you can install PHP on your VPS:
 sudo apt install php php-cli php-curl
 
