@@ -1,10 +1,10 @@
-#Introduction to Ollama Online*
+# Introduction to Ollama Online
 
 Ollama is an AI-powered chatbot framework that allows developers to integrate conversational AI into their applications. It uses machine learning models to generate human-like responses to user queries. The key feature of Ollama is its ability to work with various machine learning models and offer a customizable environment for developers to build their chatbot applications.
 
 To make Ollama accessible online, you need to set up the Ollama API and ensure it's publicly available for external requests. Typically, the Ollama API is hosted on a local server, but to allow users to interact with it from anywhere, you need to make it available over the internet.
 
-##Steps to Make Ollama Online on Hostinger
+## Steps to Make Ollama Online on Hostinger
 
 If you're hosting your project on Hostinger, the procedure to make Ollama accessible online will include configuring your server and deploying the necessary infrastructure. Here’s a step-by-step guide to help you achieve that:
 
