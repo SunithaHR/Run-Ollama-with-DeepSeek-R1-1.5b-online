@@ -13,7 +13,7 @@ $input = file_get_contents("php://input");  // Read the raw POST data
 $data = json_decode($input, true);
 
 // Debugging: Log what is being received
-error_log("Received data: " . print_r($data, true));
+error_log("Received data: " . print_r($data, true));  // Use print_r for arrays
 
 // Check if the message is correctly structured
 if (isset($data['message']) && is_array($data['message']) && !empty($data['message'])) {
@@ -38,6 +38,9 @@ if (isset($data['message']) && is_array($data['message']) && !empty($data['messa
     // Convert to JSON format
     $json_data = json_encode($api_data);
 
+    // Debugging: Log the API payload
+    error_log("API Payload: " . $json_data);
+
     // Ollama API URL
     $url = "http://127.0.0.1:11434/api/chat";  // Adjust IP if needed
 
@@ -49,6 +52,7 @@ if (isset($data['message']) && is_array($data['message']) && !empty($data['messa
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    curl_setopt($ch, CURLOPT_TIMEOUT, 300);  // Set a reasonable timeout
 
     // Execute the request
     $response = curl_exec($ch);
